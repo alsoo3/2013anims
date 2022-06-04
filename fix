@@ -1,0 +1,8 @@
+-- fixes the animations
+
+local Char = game.Players.LocalPlayer.Character
+	local Hum = Char:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController")
+
+	for i,v in next, Hum:GetPlayingAnimationTracks() do
+		v:Stop()
+	end
